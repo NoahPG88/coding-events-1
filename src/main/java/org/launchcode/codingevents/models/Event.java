@@ -29,9 +29,9 @@ public class Event {
     @Email(message = "Invalid email. Try again.")
     private String contactEmail;
 
-    private EventType type;
+    private EventCategory type;
 
-    public Event(String name, String description, String contactEmail, EventType type) {
+    public Event(String name, String description, String contactEmail, EventCategory type) {
         this.name = name;
         this.description = description;
         this.contactEmail = contactEmail;
@@ -64,11 +64,11 @@ public class Event {
         this.contactEmail = contactEmail;
     }
 
-    public EventType getType() {
+    public EventCategory getType() {
         return type;
     }
 
-    public void setType(EventType type) {
+    public void setType(EventCategory type) {
         this.type = type;
     }
 
