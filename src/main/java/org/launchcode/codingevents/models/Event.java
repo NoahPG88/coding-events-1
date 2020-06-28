@@ -11,6 +11,7 @@ import java.util.Objects;
 /**
  * Created by Chris Bay
  */
+
 @Entity
 public class Event {
 
@@ -29,9 +30,9 @@ public class Event {
     @Email(message = "Invalid email. Try again.")
     private String contactEmail;
 
-    private EventCategory type;
+    private EventType type;
 
-    public Event(String name, String description, String contactEmail, EventCategory type) {
+    public Event(String name, String description, String contactEmail, EventType type) {
         this.name = name;
         this.description = description;
         this.contactEmail = contactEmail;
@@ -64,11 +65,11 @@ public class Event {
         this.contactEmail = contactEmail;
     }
 
-    public EventCategory getType() {
+    public EventType getType() {
         return type;
     }
 
-    public void setType(EventCategory type) {
+    public void setType(EventType type) {
         this.type = type;
     }
 
