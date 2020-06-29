@@ -3,6 +3,9 @@ package org.launchcode.codingevents.models;
 /**
  * Created by Chris Bay
  */
+
+// needs to be changed to a class, not enum
+
 public enum EventType {
 
     CONFERENCE("Conference"),

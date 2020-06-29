@@ -1,20 +1,15 @@
 package org.launchcode.codingevents.models;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
 
 @Entity
-public class EventCategory {
-
-    @Id
-    @GeneratedValue
-    private int id;
+public class EventCategory extends AbstractEntity{
 
     @NotBlank(message = "Cannot be blank")
     private String name;
 
+    @NotBlank
     public EventCategory(String name){
         this.name = name;
     }
@@ -29,8 +24,9 @@ public class EventCategory {
         this.name = name;
     }
 
-    public int getId() {
-        return id;
+    @Override
+    public String toString() {
+        return name;
     }
 }
 
